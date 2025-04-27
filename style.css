@@ -16,13 +16,14 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    overflow-x: hidden; /* Asegurarnos de que no haya desplazamiento horizontal */
 }
 
 /* Encabezado */
 header {
-    background: rgba(0, 0, 0, 0.7); /* Fondo opaco */
+    background: rgba(0, 0, 0, 1.0); /* Fondo opaco */
     width: 100%;
-    padding: 1em 2em;
+    padding: 1em 2em; /* Ajusta el padding para reducir altura */
     position: sticky;
     top: 0;
     z-index: 999;
@@ -30,6 +31,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Línea sutil en la parte inferior */
+    flex-wrap: wrap; /* Para que los elementos no se solapen */
 }
 
 /* Logo */
@@ -64,6 +66,7 @@ header {
     margin-right: auto;
     max-width: 1000px;
     width: 100%; /* Asegura que se ajuste el contenido */
+    margin-top: 120px; /* Añadido para que las secciones no estén tapadas por el header */
 }
 
 .section h1,
@@ -155,6 +158,7 @@ body.claro .whatsapp-btn:hover {
     /* Ajustar el padding en la sección */
     .section {
         padding: 3em 1.5em;
+        margin-top: 180px; /* Ajustar el margen superior */
     }
 
     /* Cambiar el tamaño del texto */
@@ -169,7 +173,7 @@ body.claro .whatsapp-btn:hover {
 
     /* Hacer que el menú sea más accesible */
     header {
-        padding: 1em;
+        padding: 0.5em 1em; /* Reducir el padding para hacer el header más pequeño */
         flex-direction: column;
         align-items: center;
     }
